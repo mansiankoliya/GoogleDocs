@@ -7,7 +7,7 @@ dotenv.config();
 
 const seedDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/googledocs');
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mansiaankoliya5876_db_user:NAkBShPr6hagl7uq@cluster0.i0aaskk.mongodb.net/googledocs');
     
     console.log('MongoDB connected. Seeding users...');
     
