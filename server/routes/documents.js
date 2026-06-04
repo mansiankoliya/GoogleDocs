@@ -9,9 +9,11 @@ import {
   shareDocument,
   uploadFile
 } from '../controllers/documentController.js';
+import os from 'os';
 
 const router = express.Router();
-const upload = multer({ dest: 'uploads/' });
+// Configure multer to save files to the /tmp directory (Vercel requires this)
+const upload = multer({ dest: os.tmpdir() + '/uploads/' });
 
 // Apply auth middleware to all document routes
 router.use(auth);
