@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://mansiaankoliya5876_db_user:NAkBShPr6hagl7uq@cluster0.i0aaskk.mongodb.net/googledocs';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('MongoDB Connected'))
